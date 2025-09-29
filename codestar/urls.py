@@ -19,7 +19,6 @@ from django.urls import path, include
 from blog import views  # Import views from your app (replace 'blog' with your app name if different)
 
 urlpatterns = [
+    path("", include("blog.urls"), name="blog-urls"),
     path('admin/', admin.site.urls),
-    path('', views.PostList.as_view(), name='home'),
-    path('summernote/', include('django_summernote.urls')),
 ]
