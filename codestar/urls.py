@@ -20,5 +20,6 @@ from blog import views  # Import views from your app (replace 'blog' with your a
 
 urlpatterns = [
     path("", include("blog.urls"), name="blog-urls"),
+    path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
 ]
